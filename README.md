@@ -7,6 +7,8 @@ git pull origin main
 # 2. 提交所有本地修改
 git add .
 
+# 2.5.写你的代码
+
 # 3. 写版本注释（必填！）
 git commit -m "修复XX功能/新增XX页面"
 
