@@ -1,0 +1,10 @@
+{
+  "Id": "QDZY",
+  "Name": "全氮炸药",
+  "Description": "火药工程界的奇迹，爆速超越十倍音速，是常规爆破武器的性能天花板",
+  "Color": "#db0000",
+  "Hardness": 1,
+  "Cost": 3,
+  "Flammability": 0.2,
+  "Explosiveness": 1.5
+}

@@ -1,0 +1,11 @@
+{
+  "Id": "NI",
+  "Name": "镍",
+  "Description": "延展性优异的基础工业金属，是特种磁钢的核心原料",
+  "Color": "#a1a1a1",
+  "Hardness": 5,
+  "Cost": 1,
+  "Flammability": 0,
+  "Explosiveness": 0,
+  "Radioactivity": 0
+}

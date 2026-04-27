@@ -1,0 +1,6 @@
+name: "TJ"       # 内部名称（小写+连字符，唯一标识）
+displayName: "拓进"   # 游戏内显示名称
+author: "戴大帅"            # 作者名
+description: "巨量炮塔，无尽的工业能力" # 描述
+version: "1.0"               # 版本号
+minGameVersion: "157"        # 最低兼容游戏版本

@@ -1,0 +1,11 @@
+{
+  "Id": "WDZT",
+  "Name": "稳态电子团",
+  "Description": "人工约束的高能稳态电子集合体，是高能燃料、超规格合金的核心原料",
+  "Color": "#00dcdc",
+  "Hardness": 1,
+  "Cost": 5,
+  "Flammability": 0.3,
+  "Explosiveness": 0.6,
+  "Charge": 1.0
+}
