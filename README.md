@@ -1,33 +1,20 @@
 # TJNEW
 新的拓进
 
-# 1. 拉取远程最新代码
-git pull origin main
-
-# 1.5.写你的代码
-
-# 2. 提交所有本地修改
-git add .
-
-# 3. 写版本注释（必填！）
-git commit -m "修复XX功能/新增XX页面"
-
-# 4. 上传到GitHub
-git push origin main
-
-
 # --------------------------
 # 核心操作：打Tag+推送远程（发布前必做）
 # --------------------------
-# 1. 先切换到main分支，确保代码和远程完全同步
-git checkout main
-git pull origin main
+git pull origin main     拉取远程最新代码
 
-# 2. 打带注释的Tag（严格遵守语义化版本号，注释和版本说明一致）
-git tag -a v1.1.0 -m "新增高压熔炉机器、3条稀土合成链，适配像素工厂v8"
+写你的代码
 
-# 3. 推送Tag到GitHub远程仓库（推送后才能在GitHub中选到这个Tag）
-git push origin v1.1.0
+
+git add .        1. 暂存文件
+git commit -m "信息"  2. 本地提交
+git tag -a v版本号 -m "描述"  3. 打标签
+git push origin main  4. 推代码
+git push origin v版本号  5. 推标签
+
 
 # --------------------------
 # 补充常用命令（错误Tag处理）
