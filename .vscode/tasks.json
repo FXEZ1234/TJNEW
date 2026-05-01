@@ -1,22 +1,46 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "打包MOD",
-      "type": "shell",
-      "command": "powershell.exe",
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}\\build.ps1"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "✅ 方式1：VS Code直接打包（无需脚本）",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "$modContent = Get-Content 'mod.hjson' -Raw; if ($modContent -match 'version\\s*:\\s*[\"\\']?(\\d+\\.\\d+\\.\\d+)[\"\\']?') { $ver = $matches[1] } else { $ver = 'unknown' }; $zip = 'TJNEW_v' + $ver + '.zip'; Compress-Archive -Path @('mod.hjson','content','sprites','README.md') -DestinationPath $zip -Force; Write-Host '打包成功！文件名：'$zip"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "最推荐，无需额外脚本，直接在VS Code里完成打包"
+        },
+        {
+            "label": "🔨 方式2：调用一键打包.bat",
+            "type": "shell",
+            "command": "一键打包.bat",
+            "windows": {
+                "command": "cmd.exe",
+                "args": ["/c", "一键打包.bat"]
+            },
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "调用你恢复的Windows批处理脚本"
+        },
+        {
+            "label": "🛠️ 方式3：调用build.ps1（高级）",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "build.ps1"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "调用你恢复的PowerShell高级脚本，带彩色输出"
+        }
+    ]
 }
