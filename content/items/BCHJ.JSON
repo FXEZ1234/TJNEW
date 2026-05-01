@@ -7,5 +7,13 @@
   "Cost": 10,
   "Flammability": 0,
   "Explosiveness": 0.5,
-  "Radioactivity": 2.0
+  "Radioactivity": 2.0,
+  "animations": {
+    "idle": {
+      "frames": 10,
+      "speed": 0.15,
+      "loop": true,
+      "prefix": "BCHJ_"
+    }
+  }
 }

@@ -7,5 +7,13 @@
   "Cost": 5,
   "Flammability": 0.3,
   "Explosiveness": 0.6,
-  "Charge": 1.0
+  "Charge": 1.0,
+  "animations": {
+    "idle": {
+      "frames": 6,
+      "speed": 0.18,
+      "loop": true,
+      "prefix": "WDZT_"
+    }
+  }
 }
