@@ -1,0 +1,60 @@
+{
+  Id: CCC // 必须，唯一标识符，字符串，仅支持字母、数字、下划线，不可与原版/其他MOD方块ID重复
+  Name: 重型石墨压缩机 // 必须，游戏内显示名称，字符串，无特殊字符限制，支持中文
+  Description: 基于稳态电子团的终局石墨合成设备，通过高能电子团直接完成碳原子重排，实现1:1的极致石墨化转化率，是终局电子工业的核心设备。 // 可选，基础功能描述，字符串，无长度限制
+  Details: 【战时工业部终局档案】\n通过稳态电子团的定向能量输入，可在瞬间完成焦炭的石墨化反应，转化率接近100%，一台设备即可支撑全星球的石墨产能需求。 // 可选，补充说明/轻量化剧情，字符串，研究解锁后完整显示
+  Type: GenericCrafter // 必须，方块类型，字符串，可用种类：GenericCrafter、Smelter、Mixer
+  Size: 4 // 必须，方块占地面积，整数，取值范围：1~5，固定4对应4*4尺寸
+  Health: 2800 // 必须，方块基础生命值，整数，取值范围：100~10000
+  Armor: 18 // 可选，方块防御护甲，整数，取值范围：0~100
+  Category: crafting // 必须，科技树分类，字符串
+  Research: ZZL // 可选，前置解锁研究，字符串，绑定全面战争令(ZZL)
+  Requirements: [ // 必须，方块建造需求，数组
+    {
+      Item: BCHJ
+      Amount: 180
+    }
+    {
+      Item: SM
+      Amount: 250
+    }
+    {
+      Item: NI
+      Amount: 450
+    }
+    {
+      Item: CG
+      Amount: 350
+    }
+  ]
+  HasPower: true // 必须，是否消耗电力，布尔值
+  PowerUse: 30
+   // 可选，电力消耗，整数，取值范围：1~99999，适配终局设备高能耗定位
+  ConsumePowerAdditive: true // 可选，是否必须满功率工作，布尔值
+  HasItems: true // 必须，是否处理固体物品，布尔值
+  HasLiquids: false // 可选，是否处理流体，布尔值
+  CraftTime: 60 // 必须，单轮生产周期，整数，单位为帧
+  UpdateEffect: plasma // 可选，工作视觉特效，字符串
+  AmbientSound: hum // 可选，工作环境音效，字符串
+  Items: [ // 必须，输入物品列表，数组
+    {
+      Item: C // 必须，输入物品ID，字符串，焦炭的固定ID为C
+      Amount: 600 // 必须，单轮输入数量，整数，匹配配方要求
+    }
+    {
+      Item: WDZT // 必须，输入物品ID，字符串，稳态电子团的固定ID为WDZT
+      Amount: 1 // 必须，单轮输入数量，整数，匹配配方要求
+    }
+  ]
+  OutputItem: { // 必须，主输出物品，对象
+    Item: graphite // 必须，输出物品ID，字符串，原版石墨的固定ID为graphite
+    Amount: 600 // 必须，单轮输出数量，整数，匹配配方要求
+  }
+  OutputLiquid: null // 可选，输出流体，无则填null
+  CanOverdrive: false // 可选，是否可超频，布尔值
+  Solid: true // 可选，是否为实心方块，布尔值
+  PlaceableLiquid: false // 可选，是否可放液体表面，布尔值
+  PlaceableOn: both // 可选，可放置地形，字符串
+  Breakable: true // 可选，是否可被破坏，布尔值
+  BuildTime: 300 // 可选，建造时间，整数，单位为帧
+}

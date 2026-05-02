@@ -1,0 +1,52 @@
+{
+  Id: ACC // 必须，唯一标识符，字符串，仅支持字母、数字、下划线，不可与原版/其他MOD方块ID重复
+  Name: 大型石墨合成厂 // 必须，游戏内显示名称，字符串，无特殊字符限制，支持中文
+  Description: 基础型石墨合成设备，通过电力驱动高温石墨化反应，将焦炭转化为高纯度石墨，是基础电子工业的核心前置设备。 // 可选，基础功能描述，字符串，无长度限制
+  Details: 【战时工业部基础档案】\n电子工业体系的起点，高纯度石墨是所有电路、电池、超导设备的基础原料，是战时工业体系必须优先保障的产能。 // 可选，补充说明/轻量化剧情，字符串，研究解锁后完整显示
+  Type: GenericCrafter // 必须，方块类型，字符串，可用种类：GenericCrafter、Smelter、Mixer
+  Size: 3 // 必须，方块占地面积，整数，取值范围：1~5，固定3对应3*3尺寸
+  Health: 900 // 必须，方块基础生命值，整数，取值范围：100~10000
+  Armor: 5 // 可选，方块防御护甲，整数，取值范围：0~100
+  Category: crafting // 必须，科技树分类，字符串
+  Research: DYL // 可选，前置解锁研究，字符串，绑定全国工业动员令(DYL)
+  Requirements: [ // 必须，方块建造需求，数组
+    {
+      Item: NI
+      Amount: 60
+    }
+    {
+      Item: MO
+      Amount: 40
+    }
+    {
+      Item: CG
+      Amount: 30
+    }
+  ]
+  HasPower: true // 必须，是否消耗电力，布尔值
+  PowerUse: 2
+   // 可选，电力消耗，整数，取值范围：1~99999，固定120匹配配方要求
+  ConsumePowerAdditive: false // 可选，是否必须满功率工作，布尔值
+  HasItems: true // 必须，是否处理固体物品，布尔值
+  HasLiquids: false // 可选，是否处理流体，布尔值
+  CraftTime: 60 // 必须，单轮生产周期，整数，单位为帧
+  UpdateEffect: smeltersteam // 可选，工作视觉特效，字符串
+  AmbientSound: smelt // 可选，工作环境音效，字符串
+  Items: [ // 必须，输入物品列表，数组
+    {
+      Item: C // 必须，输入物品ID，字符串，焦炭的固定ID为C
+      Amount: 4 // 必须，单轮输入数量，整数，匹配配方要求
+    }
+  ]
+  OutputItem: { // 必须，主输出物品，对象
+    Item: graphite // 必须，输出物品ID，字符串，原版石墨的固定ID为graphite
+    Amount: 2 // 必须，单轮输出数量，整数，匹配配方要求
+  }
+  OutputLiquid: null // 可选，输出流体，无则填null
+  CanOverdrive: true // 可选，是否可超频，布尔值
+  Solid: true // 可选，是否为实心方块，布尔值
+  PlaceableLiquid: false // 可选，是否可放液体表面，布尔值
+  PlaceableOn: both // 可选，可放置地形，字符串
+  Breakable: true // 可选，是否可被破坏，布尔值
+  BuildTime: 60 // 可选，建造时间，整数，单位为帧
+}
