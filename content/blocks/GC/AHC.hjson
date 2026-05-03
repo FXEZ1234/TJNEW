@@ -1,49 +1,93 @@
 {
-  Id: AHC // 必须，唯一标识符，字符串，仅支持字母、数字、下划线，不可与原版/其他MOD重复
-  Name: 沙尘收集器 // 必须，游戏内显示名称，字符串，无特殊字符限制，支持中文
-  Description: 收集空气中的沙尘 // 可选，基础功能描述，字符串，无长度限制
-  Details: 所以为什么不直接挖呢 // 可选，补充说明/轻量化剧情，字符串，研究解锁后显示
-  Type: GenericCrafter // 必须，方块类型，字符串，可用种类：GenericCrafter（通用生产方块，推荐，支持多输入多输出）、Smelter（熔炉类，仅支持2进1出）、Mixer（混合类，支持液体），这里选GenericCrafter最灵活
-  Size: 2 // 必须，方块大小，整数，取值范围：1（1x1）、2（2x2）、3（3x3）、4（4x4）、5（5x5），2x2适配大多数工厂布局
-  Health: 800 // 必须，方块生命值，整数，取值范围：100~10000，原版沙泵为400，这里提升至800适配战时环境
-  Armor: 5 // 可选，方块护甲，整数，取值范围：0~100，默认0，减少受到的伤害
-  Category: crafting // 必须，科技树分类，字符串，可用种类：crafting（生产类）、turret（炮台类）、defense（防御类）、liquid（液体类）、power（电力类）、effect（效果类）、unit（单位类）
-  Research: DYL // 可选，前置解锁研究，字符串，填写对应物品/研究的ID，这里绑定全国工业动员令，符合战时解锁逻辑
-  Requirements: [ // 必须，建造需求，数组，每个元素包含Item（物品ID）和Amount（数量）
-    {
-      Item: NI // 必须，需求物品ID，字符串，填写对应物品的ID
-      Amount: 80 // 必须，需求数量，整数，取值范围：1~9999
-    }
-    {
-      Item: MO
-      Amount: 50
-    }
-    {
-      Item: CG
-      Amount: 40
-    }
-  ]
-  HasPower: true // 必须，是否需要电力，布尔值，取值范围：true（需要）、false（不需要），生产类方块必须为true
-  PowerUse: 4
-   // 可选，电力消耗，整数，取值范围：1~99999，单位为功率/帧，这里设为240，对应240电/60帧（1秒）生产10沙
-  ConsumePowerAdditive: false // 可选，是否满功率才工作，布尔值，取值范围：true（不满电不工作）、false（功率不足时降速），默认false
-  HasItems: true // 必须，是否处理物品，布尔值，取值范围：true（是）、false（否），生产类方块必须为true
-  HasLiquids: false // 可选，是否处理液体，布尔值，取值范围：true（是）、false（否），默认false，这个工厂不需要液体
-  CraftTime: 60 // 必须，生产周期，整数，取值范围：1~9999，单位为帧（60帧=1秒），这里设为60，即1秒生产一次
-  UpdateEffect: pulverize // 可选，工作时的特效，字符串，可用种类：smeltersteam（冶炼蒸汽）、pulverize（粉碎粉尘）、melt（熔化特效）等，默认无特效
-  AmbientSound: craft // 可选，环境音效，字符串，可用种类：smelt（冶炼声）、craft（生产声）、hum（电流声）等，默认无声
-  Items: [] // 必须，输入物品，数组，每个元素包含Item（物品ID）和Amount（数量），这个工厂仅用电，输入物品为空
-  OutputItem: { // 必须，输出物品，对象，包含Item（物品ID）和Amount（数量）
-    Item: sand // 必须，输出物品ID，字符串，原版沙的ID为sand
-    Amount: 10 // 必须，输出数量，整数，取值范围：1~999，对应240电生产10沙
+id: "AHC"
+# 【必填】唯一标识符，字符串，仅支持字母/数字/下划线，不可与原版/其他MOD方块id重复
+name: 沙尘收集器
+# 【必填】游戏内显示名称，字符串，支持中文，无特殊字符可省略双引号
+description: "收集空气中的沙尘，无需额外原料，仅消耗电力即可稳定产出沙"
+# 【可选】基础功能描述，字符串，包含中文必须加双引号，显示在方块详情页
+details: "所以为什么不直接挖呢"
+# 【可选】补充说明/轻量化剧情，字符串，研究解锁后完整显示
+type: GenericCrafter
+# 【必填】方块类型，字符串，可用枚举值：
+#  GenericCrafter（通用生产方块，支持多输入多输出，灵活性最高）
+#  Smelter（熔炉类，仅支持2进1出）
+#  Mixer（混合类，仅支持液体混合）
+size: 2
+# 【必填】方块占地面积，整数，取值范围：1~5，对应1x1~5x5的格子尺寸，2x2适配紧凑工厂布局
+health: 800
+# 【必填】方块基础生命值，整数，取值范围：100~10000，原版沙泵为400，适配战时环境提升至800
+armor: 5
+# 【可选】方块防御护甲，整数，取值范围：0~100，数值越高受到的伤害越低，默认值0
+category: crafting
+# 【必填】科技树分类，字符串，可用枚举值：
+#  crafting（生产类）、turret（炮塔类）、defense（防御类）
+#  liquid（液体类）、power（电力类）、effect（功能类）、unit（单位类）
+research: DYL
+# 【可选】前置解锁研究，字符串，仅填写对应物品/方块/指令的纯id，不可添加其他内容
+requirements: [
+  {
+    item: NI
+    # 【必填】需求物品id，字符串，填写原版/自定义物品的纯id
+    amount: 80
+    # 【必填】需求物品数量，整数，取值范围：1~9999
   }
-  OutputLiquid: null // 可选，输出液体，对象，格式同OutputItem，无液体输出时填null
-  CanOverdrive: true // 可选，是否可被超频，布尔值，取值范围：true（是）、false（否），默认true，超频后产量进一步提升
-  Inverted: false // 可选，是否反转逻辑，布尔值，取值范围：true（是）、false（否），默认false，生产类方块无需反转
-  Solid: true // 可选，是否为实心方块，布尔值，取值范围：true（是，单位无法穿过）、false（否，单位可穿过），默认true
-  PlaceableLiquid: false // 可选，是否可放置在液体中，布尔值，取值范围：true（是）、false（否），默认false
-  PlaceableOn: both // 可选，可放置地形，字符串，可用种类：both（陆地+液体）、land（仅陆地）、liquid（仅液体），默认both
-  Breakable: true // 可选，是否可被破坏，布尔值，取值范围：true（是）、false（否），默认true
-  BuildCostMultiplier: 1.0 // 可选，建造成本倍率，浮点数，取值范围：0.1~10.0，默认1.0
-  BuildTime: 60 // 可选，建造时间，整数，取值范围：1~9999，单位为帧，默认60
+  {
+    item: MO
+    amount: 50
+  }
+  {
+    item: CG
+    amount: 40
+  }
+]
+# 【必填】方块建造需求，数组，每个元素为物品id+数量，无建造需求填空数组[]
+hasPower: true
+# 【必填】是否消耗电力，布尔值，取值范围：true/false，生产类方块必须为true
+powerUse: 4
+# 【可选】每帧电力消耗，数值（整数/浮点数），取值范围：0.01~99999
+# 【计算公式】游戏内显示的每秒电力消耗 ÷ 60 = 代码值，游戏固定1秒=60帧，240游戏电÷60=4
+consumePowerAdditive: false
+# 【可选】是否必须满功率才能工作，布尔值，取值范围：true/false
+# true=不满电完全不工作，false=功率不足时降速生产，默认值false
+hasItems: true
+# 【必填】是否处理固体物品，布尔值，取值范围：true/false，涉及物品输入输出必须为true
+hasLiquids: false
+# 【必填】是否处理流体，布尔值，取值范围：true/false，涉及液体输入输出必须为true
+craftTime: 60
+# 【必填】单轮生产周期，整数，取值范围：1~9999，单位为帧
+# 【计算公式】生产周期秒数 × 60 = 代码值，固定60=1秒完成一轮生产，和每秒消耗/产出完全对应
+updateEffect: pulverize
+# 【可选】工作时的视觉特效，字符串，可用枚举值：
+#  pulverize（粉碎粉尘，沙尘收集首选）、smeltersteam（冶炼蒸汽）、melt（熔化特效）、none（无特效）
+ambientSound: craft
+# 【可选】工作时的环境音效，字符串，可用枚举值：
+#  craft（生产声）、smelt（冶炼声）、hum（电流声）、none（无声）
+items: []
+# 【必填】固体输入列表，数组，无固体输入填空数组[]，该设备仅用电，无原料输入
+outputItem: {
+  item: sand
+  # 【必填】输出物品id，字符串，填写原版/自定义物品的纯id，原版沙固定id为sand
+  amount: 10
+  # 【必填】单轮生产输出数量，整数，取值范围：1~999
+}
+# 【可选】单物品输出，对象，仅单固体输出时使用，多输出用outputItems
+outputLiquid: null
+# 【可选】单流体输出，对象，仅单流体输出时使用，无流体输出固定填null
+canOverdrive: true
+# 【可选】是否可被超频项目超频，布尔值，取值范围：true/false，默认值true，超频后产量进一步提升
+inverted: false
+# 【可选】是否反转逻辑，布尔值，取值范围：true/false，默认值false，生产类方块无需反转
+solid: true
+# 【可选】是否为实心方块，布尔值，取值范围：true（单位无法穿过）/false（单位可穿过），默认值true
+placeableLiquid: false
+# 【可选】是否可放置在液体表面，布尔值，取值范围：true/false，默认值false
+placeableOn: both
+# 【可选】可放置地形，字符串，可用枚举值：both（陆地+液体）、land（仅陆地）、liquid（仅液体），默认值both
+breakable: true
+# 【可选】是否可被敌方单位破坏，布尔值，取值范围：true/false，默认值true
+buildCostMultiplier: 1.0
+# 【可选】建造成本倍率，浮点数，取值范围：0.1~10.0，默认值1.0
+buildTime: 60
+# 【可选】建造所需时间，整数，取值范围：1~9999，单位为帧
+# 【计算公式】建造秒数 × 60 = 代码值，默认值60=1秒建造完成
 }

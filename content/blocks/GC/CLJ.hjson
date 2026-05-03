@@ -1,60 +1,96 @@
 {
-  Id: CLJ // 必须，唯一标识符，字符串，仅支持字母、数字、下划线，不可与原版/其他MOD方块ID重复
-  Name: 重型焦化厂 // 必须，游戏内显示名称，字符串，无特殊字符限制，支持中文
-  Description: 大型工业级焦化设备，多腔室连续干馏设计，产能巨大、转化率极致，是全星球煤化工体系的终局核心产能设备。 // 可选，基础功能描述，字符串，无长度限制
-  Details: 【战时工业部核心档案】\n全星球焦化产能的核心支柱，是战时工业体系必须最高优先级保护的核心工厂。 // 可选，补充说明/轻量化剧情，字符串，研究解锁后完整显示
-  Type: GenericCrafter // 必须，方块类型，字符串，可用种类：GenericCrafter、Smelter、Mixer
-  Size: 4 // 必须，方块占地面积，整数，取值范围：1~5，固定4对应4*4尺寸
-  Health: 2500 // 必须，方块基础生命值，整数，取值范围：100~10000
-  Armor: 15 // 可选，方块防御护甲，整数，取值范围：0~100
-  Category: crafting // 必须，科技树分类，字符串
-  Research: DYL // 可选，前置解锁研究，字符串，绑定全国工业动员令(DYL)
-  Requirements: [ // 必须，方块建造需求，数组
+  id: "CLJ"
+  # 【必填】唯一标识符，必须加英文双引号，不可与原版/其他MOD方块ID重复
+  name: "重型焦化厂"
+  # 【必填】游戏内显示名称，支持中文
+  description: "大型工业级焦化设备，多腔室连续干馏设计，产能巨大、转化率极致，是全星球煤化工体系的终局核心产能设备。"
+  # 【可选】基础功能描述，显示在方块详情页
+  details: "【战时工业部核心档案】\n全星球焦化产能的核心支柱，是战时工业体系必须最高优先级保护的核心工厂。"
+  # 【可选】补充剧情说明，研究解锁后完整显示
+  type: GenericCrafter
+  # 【必填】方块类型，生产类工厂固定用GenericCrafter
+  size: 4
+  # 【必填】方块占地面积，4对应4*4尺寸
+  health: 2500
+  # 【必填】方块基础生命值
+  armor: 15
+  # 【可选】方块防御护甲，数值越高受到的伤害越低
+  category: crafting
+  # 【必填】科技树分类，生产类固定选crafting
+  research: "DYL"
+  # 【可选】前置解锁研究ID，必须加双引号
+  requirements: [
     {
-      Item: NI
-      Amount: 300
+      item: "NI"
+      # 【必填】需求物品ID，必须加双引号
+      amount: 300
+      # 【必填】需求物品数量
     }
     {
-      Item: MO
-      Amount: 200
+      item: "MO"
+      amount: 200
     }
     {
-      Item: CG
-      Amount: 150
+      item: "CG"
+      amount: 150
     }
     {
-      Item: SM
-      Amount: 100
-    }
-  ]
-  HasPower: true // 必须，是否消耗电力，布尔值
-  PowerUse: 10 // 可选，电力消耗，整数，取值范围：1~99999，600游戏电 ÷60=10，完全匹配配方要求
-  ConsumePowerAdditive: false // 可选，是否必须满功率工作，布尔值
-  HasItems: true // 必须，是否处理固体物品，布尔值
-  HasLiquids: true // 可选，是否处理流体，布尔值，需要输出煤焦油
-  CraftTime: 60 // 必须，单轮生产周期，整数，单位为帧
-  UpdateEffect: smeltersteam // 可选，工作视觉特效，字符串
-  AmbientSound: smelt // 可选，工作环境音效，字符串
-  Items: [ // 必须，输入物品列表，数组
-    {
-      Item: coal // 必须，输入物品ID，字符串，原版煤的固定ID为coal
-      Amount: 60 // 必须，单轮输入数量，整数，匹配配方要求
+      item: "SM"
+      amount: 100
     }
   ]
-  OutputItems: [ // 必须，多输出物品列表，数组，用于输出焦炭
+  # 【必填】方块建造需求
+  hasPower: true
+  # 【必填】是否消耗电力，生产类方块必须为true
+  powerUse: 10
+  # 【可选】每帧电力消耗，计算公式：游戏内每秒耗电 ÷ 60 = 代码值
+  consumePowerAdditive: false
+  # 【可选】是否必须满功率才能工作，false=功率不足时降速生产
+  hasItems: true
+  # 【必填】是否处理固体物品，涉及物品输入输出必须为true
+  hasLiquids: true
+  # 【必填】是否处理流体，涉及液体输入输出必须为true
+  craftTime: 60
+  # 【必填】单轮生产周期，单位为帧，60帧=1秒
+  updateEffect: smeltersteam
+  # 【可选】工作时的视觉特效，冶炼类适配smeltersteam
+  ambientSound: smelt
+  # 【可选】工作时的环境音效，冶炼类适配smelt
+  items: [
     {
-      Item: C // 必须，输出物品ID，字符串，焦炭的固定ID为C
-      Amount: 50 // 必须，单轮输出数量，整数，匹配配方要求
+      item: "coal"
+      # 【必填】输入物品ID，原版煤固定ID为coal，必须加双引号
+      amount: 60
+      # 【必填】单轮生产输入数量
     }
   ]
-  OutputLiquid: { // 必须，输出流体，对象，用于输出煤焦油
-    Liquid: MJY // 必须，输出流体ID，字符串，煤焦油的固定ID为MJY
-    Amount: 8 // 必须，单轮输出数量，整数，匹配配方要求
+  # 【必填】输入物品列表，无输入填空数组[]
+  outputItems: [
+    {
+      item: "C"
+      # 【必填】输出物品ID，焦炭固定ID为C，必须加双引号
+      amount: 50
+      # 【必填】单轮生产输出数量
+    }
+  ]
+  # 【必填】多物品输出列表，单物品输出用outputItem
+  outputLiquid: {
+    liquid: "MJY"
+    # 【必填】输出流体ID，煤焦油固定ID为MJY，必须加双引号
+    amount: 8
+    # 【必填】每帧流体输出量
   }
-  CanOverdrive: true // 可选，是否可超频，布尔值
-  Solid: true // 可选，是否为实心方块，布尔值
-  PlaceableLiquid: false // 可选，是否可放液体表面，布尔值
-  PlaceableOn: both // 可选，可放置地形，字符串
-  Breakable: true // 可选，是否可被破坏，布尔值
-  BuildTime: 120 // 可选，建造时间，整数，单位为帧
+  # 【可选】单流体输出，多流体输出用outputLiquids
+  canOverdrive: true
+  # 【可选】是否可被超频项目超频
+  solid: true
+  # 【可选】是否为实心方块，true=单位无法穿过
+  placeableLiquid: false
+  # 【可选】是否可放置在液体表面
+  placeableOn: both
+  # 【可选】可放置地形，both=陆地+液体
+  breakable: true
+  # 【可选】是否可被敌方单位破坏
+  buildTime: 120
+  # 【可选】建造所需时间，单位为帧
 }

@@ -1,56 +1,56 @@
 {
-  Id: ALJ // 必须，唯一标识符，字符串，仅支持字母、数字、下划线，不可与原版/其他MOD方块ID重复
-  Name: 煤焦化研究所 // 必须，游戏内显示名称，字符串，无特殊字符限制，支持中文
-  Description: 前线小型焦化设备，专为前沿阵地设计，部署门槛低、占地面积小，可在前线完成煤的焦化，为阵地提供焦炭与煤焦油。 // 可选，基础功能描述，字符串，无长度限制
-  Details: 【战时工业部前线档案】\n专为无后方焦炭补给的前沿阵地设计，虽然产能偏低，但可在前线直接完成煤的焦化，是阵地工业体系的核心前置设备。 // 可选，补充说明/轻量化剧情，字符串，研究解锁后完整显示
-  Type: GenericCrafter // 必须，方块类型，字符串，可用种类：GenericCrafter、Smelter、Mixer
-  Size: 3 // 必须，方块占地面积，整数，取值范围：1~5，固定3对应3*3尺寸
-  Health: 1000 // 必须，方块基础生命值，整数，取值范围：100~10000
-  Armor: 6 // 可选，方块防御护甲，整数，取值范围：0~100
-  Category: crafting // 必须，科技树分类，字符串
-  Research: DYL // 可选，前置解锁研究，字符串，绑定全国工业动员令(DYL)
-  Requirements: [ // 必须，方块建造需求，数组
+  id: "ALJ"
+  name: "煤焦化研究所"
+  description: "前线小型焦化设备，专为前沿阵地设计，部署门槛低、占地面积小，可在前线完成煤的焦化，为阵地提供焦炭与煤焦油。"
+  details: "【战时工业部前线档案】\n专为无后方焦炭补给的前沿阵地设计，虽然产能偏低，但可在前线直接完成煤的焦化，是阵地工业体系的核心前置设备。"
+  type: GenericCrafter
+  size: 3
+  health: 1000
+  armor: 6
+  category: crafting
+  research: "DYL"
+  requirements: [
     {
-      Item: NI
-      Amount: 70
+      item: "NI"
+      amount: 70
     }
     {
-      Item: MO
-      Amount: 50
+      item: "MO"
+      amount: 50
     }
     {
-      Item: CG
-      Amount: 40
-    }
-  ]
-  HasPower: true // 必须，是否消耗电力，布尔值
-  PowerUse: 0.1 // 可选，电力消耗，浮点数，取值范围：0.01~99999，6游戏电 ÷60=0.1，完全匹配配方要求
-  ConsumePowerAdditive: false // 可选，是否必须满功率工作，布尔值
-  HasItems: true // 必须，是否处理固体物品，布尔值
-  HasLiquids: true // 可选，是否处理流体，布尔值，需要输出煤焦油
-  CraftTime: 60 // 必须，单轮生产周期，整数，单位为帧
-  UpdateEffect: smeltersteam // 可选，工作视觉特效，字符串
-  AmbientSound: smelt // 可选，工作环境音效，字符串
-  Items: [ // 必须，输入物品列表，数组
-    {
-      Item: coal // 必须，输入物品ID，字符串，原版煤的固定ID为coal
-      Amount: 4 // 必须，单轮输入数量，整数，匹配配方要求
+      item: "CG"
+      amount: 40
     }
   ]
-  OutputItems: [ // 必须，多输出物品列表，数组，用于输出焦炭
+  hasPower: true
+  powerUse: 0.1
+  consumePowerAdditive: false
+  hasItems: true
+  hasLiquids: true
+  craftTime: 60
+  updateEffect: smeltersteam
+  ambientSound: smelt
+  items: [
     {
-      Item: C // 必须，输出物品ID，字符串，焦炭的固定ID为C
-      Amount: 1 // 必须，单轮输出数量，整数，匹配配方要求
+      item: "coal"
+      amount: 4
     }
   ]
-  OutputLiquid: { // 必须，输出流体，对象，用于输出煤焦油
-    Liquid: MJY // 必须，输出流体ID，字符串，煤焦油的固定ID为MJY
-    Amount: 0.25 // 必须，单轮输出数量，整数，匹配配方要求
+  outputItems: [
+    {
+      item: "C"
+      amount: 1
+    }
+  ]
+  outputLiquid: {
+    liquid: "MJY"
+    amount: 0.25
   }
-  CanOverdrive: true // 可选，是否可超频，布尔值
-  Solid: true // 可选，是否为实心方块，布尔值
-  PlaceableLiquid: false // 可选，是否可放液体表面，布尔值
-  PlaceableOn: both // 可选，可放置地形，字符串
-  Breakable: true // 可选，是否可被破坏，布尔值
-  BuildTime: 60 // 可选，建造时间，整数，单位为帧
+  canOverdrive: true
+  solid: true
+  placeableLiquid: false
+  placeableOn: both
+  breakable: true
+  buildTime: 60
 }
