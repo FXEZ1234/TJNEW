@@ -1,0 +1,13 @@
+{
+  "name": "氨",
+  "description": "基础化工气态原料，工业酸合成核心反应物，也是制冷与催化工艺的关键介质。",
+  "details": "【战时化工核心档案】\n全化工体系的起点，工业酸合成的唯一核心原料，必须优先保障氨产线的安全运行。",
+  "color": "cceeff",
+  "gas": true,
+  "flammability": 0.0,
+  "explosiveness": 0.2,
+  "temperature": -0.5,
+  "heatCapacity": 0.5,
+  "viscosity": 0.1,
+  "research": "DYL"
+}

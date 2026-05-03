@@ -1,0 +1,109 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】方块类型，生产工厂固定 GenericCrafter
+
+  "name": "联合硅冶炼厂",
+  // 【必填】游戏内建造菜单显示名称
+
+  "description": "战时前线基础硅冶炼设备，无需前置焦化产线，直接以煤为还原剂，低门槛实现硅的稳定量产，是小型阵地工业体系的核心保障。",
+  // 【可选】方块基础简介，显示在物品详情页
+
+  "details": "【战时工业部前线量产档案】\n专为无焦炭产能的前沿阵地设计，部署门槛极低，虽然原料转化率偏低，但可直接用煤完成硅冶炼，是前线阵地的标配工业设备。",
+  // 【可选】解锁后完整剧情介绍，支持换行符\n
+
+  "size": 3,
+  // 【必填】方块占地尺寸 3×3
+
+  "health": 1000,
+  // 【必填】方块基础生命值
+
+  "armor": 6,
+  // 【可选】方块护甲值，数值越高减伤越高
+
+  "category": "crafting",
+  // 【必填】科技树分类，生产类统一填crafting
+
+  "research": "DYL",
+  // 【可选】解锁该方块的前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      // 建造所需物品ID
+      "amount": 70
+      // 建造所需物品数量
+    },
+    {
+      "item": "MO",
+      "amount": 50
+    },
+    {
+      "item": "CG",
+      "amount": 40
+    }
+  ],
+  // 【必填】方块建造材料列表
+
+  "hasPower": true,
+  // 【必填】是否消耗电力，耗电工厂固定true
+
+  "hasItems": true,
+  // 【必填】是否收发固体物品，有原料产出固定true
+
+  "hasLiquids": false,
+  // 【必填】是否收发流体，无液体进出固定false
+
+  "consumes": {
+    // 【核心】生产消耗配置总容器
+
+    "power": 3.0,
+    // 每帧电力消耗数值
+
+    "items": [
+      {
+        "item": "sand",
+        // 生产输入原料ID
+        "amount": 10
+        // 单次生产消耗数量
+      },
+      {
+        "item": "coal",
+        "amount": 10
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 【必填】单次生产周期 60帧=1秒
+
+  "updateEffect": "none",
+  // 关闭旧版动态特效，防止游戏报错
+
+  "craftEffect": "smeltsmoke",
+  // 工作时冶炼烟雾特效
+
+  "outputItem": {
+    "item": "silicon",
+    // 产出物品ID
+    "amount": 7
+    // 单次生产产出数量
+  },
+
+  "outputLiquid": null,
+  // 无流体产出固定填null
+
+  "canOverdrive": true,
+  // 是否支持超频加速生产
+
+  "solid": true,
+  // 是否为实心方块，敌方单位无法穿过
+
+  "placeableLiquid": false,
+  // 禁止放置在液体表面
+
+  "breakable": true,
+  // 允许被敌方单位摧毁
+
+  "buildTime": 60
+  // 【可选】建造耗时 60帧=1秒
+}

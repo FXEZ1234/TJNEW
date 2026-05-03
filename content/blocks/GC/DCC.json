@@ -1,0 +1,100 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】生产工厂类型
+
+  "name": "湿法石墨合成厂",
+  // 【必填】游戏内名称
+
+  "description": "湿法提纯型石墨合成设备，通过水溶液辅助提纯，石墨纯度更高、杂质更少，是高精度电子元件的核心原料生产设备。",
+  // 【可选】功能简介
+
+  "details": "【战时工业部精密档案】\n专为高精度电子设备设计，湿法提纯生产的高纯度石墨，是相位雷达、超导阵列的核心原料，是高端军工体系的必备产能。",
+  // 【可选】精密工业剧情
+
+  "size": 3,
+  // 【必填】3×3标准尺寸
+
+  "health": 1000,
+  // 【必填】基础生命值
+
+  "armor": 6,
+  // 【可选】基础护甲
+
+  "category": "crafting",
+  // 【必填】生产分类
+
+  "research": "JSL",
+  // 【可选】专属前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 70
+    },
+    {
+      "item": "MO",
+      "amount": 50
+    },
+    {
+      "item": "CG",
+      "amount": 40
+    },
+    {
+      "item": "titanium",
+      "amount": 30
+    }
+  ],
+  // 建造材料，已替换无效TI为原版钛
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体原料
+
+  "hasLiquids": true,
+  // 启用液体输入
+
+  "consumes": {
+    "power": 1.5,
+    // 每帧电力消耗
+    "items": [
+      {
+        "item": "C",
+        "amount": 10
+      }
+    ],
+    "liquid": {
+      "liquid": "water",
+      // 输入流体为水
+      "amount": 1.0
+      // 单次消耗水量
+    }
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽旧特效防报错
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼烟雾特效
+
+  "outputItem": {
+    "item": "graphite",
+    "amount": 8
+  },
+  // 高纯度石墨产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": true,
+  // 支持超频
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

@@ -1,0 +1,97 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】工厂固定类型
+
+  "name": "标准焦化厂",
+  // 【必填】游戏内显示名
+
+  "description": "工业标准型焦化设备，优化了干馏反应腔结构，焦炭转化率更高、煤焦油回收率更优，是后方工业基地焦化产能的主力设备。",
+  // 【可选】功能简介
+
+  "details": "【战时工业部量产档案】\n后方工业基地的标配焦化设备，相比前线小型设备，焦炭转化率提升60%以上，是整个星球煤化工体系的核心主力。",
+  // 【可选】剧情详情
+
+  "size": 3,
+  // 【必填】3×3尺寸
+
+  "health": 1400,
+  // 【必填】基础生命值
+
+  "armor": 10,
+  // 【可选】护甲防御
+
+  "category": "crafting",
+  // 【必填】生产分类
+
+  "research": "DYL",
+  // 【可选】前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 120
+    },
+    {
+      "item": "MO",
+      "amount": 90
+    },
+    {
+      "item": "CG",
+      "amount": 70
+    }
+  ],
+  // 建造材料列表
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体物品
+
+  "hasLiquids": true,
+  // 启用流体输出
+
+  "consumes": {
+    "power": 0.5,
+    // 每帧电力消耗
+    "items": [
+      {
+        "item": "coal",
+        "amount": 15
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 关闭旧特效防崩溃
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼烟雾特效
+
+  "outputItems": [
+    {
+      "item": "C",
+      "amount": 10
+    }
+  ],
+  // 多物品输出专用字段
+
+  "outputLiquid": {
+    "liquid": "MJY",
+    // 产出流体ID
+    "amount": 1.5
+    // 流体产出量
+  },
+  // 附带煤焦油流体产出
+
+  "canOverdrive": true,
+  // 支持超频
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

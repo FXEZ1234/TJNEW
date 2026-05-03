@@ -1,0 +1,94 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】生产工厂类型
+
+  "name": "高纯硅冶炼厂",
+  // 【必填】游戏内名称
+
+  "description": "标准型硅冶炼设备，以焦炭为还原剂，冶炼效率稳定、能耗更低，是后方工业基地硅产能的核心主力设备。",
+  // 【可选】方块简介
+
+  "details": "【战时工业部量产档案】\n后方工业基地的标配硅冶炼设备，以焦炭为还原剂，相比前线型ASI设备能耗更低、生产更稳定，是整个星球硅产能的核心保障。",
+  // 【可选】剧情补充
+
+  "size": 3,
+  // 【必填】3×3占地
+
+  "health": 1200,
+  // 【必填】基础血量
+
+  "armor": 8,
+  // 【可选】护甲值
+
+  "category": "crafting",
+  // 【必填】生产分类
+
+  "research": "DYL",
+  // 【可选】解锁研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 80
+    },
+    {
+      "item": "MO",
+      "amount": 60
+    },
+    {
+      "item": "CG",
+      "amount": 50
+    }
+  ],
+  // 建造所需材料
+
+  "hasPower": true,
+  // 耗电开启
+
+  "hasItems": true,
+  // 固体物品收发
+
+  "hasLiquids": false,
+  // 无流体处理
+
+  "consumes": {
+    "power": 2.5,
+    // 每帧耗电
+    "items": [
+      {
+        "item": "sand",
+        "amount": 10
+      },
+      {
+        "item": "C",
+        "amount": 5
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽报错特效
+
+  "craftEffect": "smeltsmoke",
+  // 工作烟雾特效
+
+  "outputItem": {
+    "item": "silicon",
+    "amount": 5
+  },
+  // 单物品产出配置
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": true,
+  // 可超频
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

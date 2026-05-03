@@ -1,0 +1,13 @@
+{
+  "name": "凝固汽油",
+  "description": " incendiary武器核心流体，高燃烧持续性，用于阵地防御与范围焚烧作战。",
+  "details": "【战时武器档案】\n阵地防御专用燃烧流体，附着式持续燃烧，是封锁敌方进攻路线的核心战术武器。",
+  "color": "ff4400",
+  "gas": false,
+  "flammability": 1.0,
+  "explosiveness": 0.3,
+  "temperature": 0.5,
+  "heatCapacity": 0.4,
+  "viscosity": 0.8,
+  "research": "DYL"
+}

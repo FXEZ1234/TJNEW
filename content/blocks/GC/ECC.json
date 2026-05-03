@@ -1,0 +1,100 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】工厂固定类型
+
+  "name": "ECC催化石墨合成厂",
+  // 【必填】游戏内显示名称
+
+  "description": "氨催化型石墨合成设备，通过氨作为催化剂，大幅提升石墨化反应效率，是大规模量产高纯度石墨的核心工业设备。",
+  // 【可选】功能简介
+
+  "details": "【战时工业部量产档案】\n通过氨催化工艺，将焦炭的石墨化转化率提升至90%以上，是大规模量产高纯度石墨的最优方案，为全星球的军工与电子工业提供核心支撑。",
+  // 【可选】量产工业剧情
+
+  "size": 3,
+  // 【必填】3×3标准尺寸
+
+  "health": 1300,
+  // 【必填】中高生命值
+
+  "armor": 9,
+  // 【可选】中阶护甲
+
+  "category": "crafting",
+  // 【必填】生产科技分类
+
+  "research": "DYL",
+  // 【可选】前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 90
+    },
+    {
+      "item": "MO",
+      "amount": 70
+    },
+    {
+      "item": "CG",
+      "amount": 60
+    },
+    {
+      "item": "SM",
+      "amount": 40
+    }
+  ],
+  // 建造材料需求
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体原料
+
+  "hasLiquids": true,
+  // 启用催化流体输入
+
+  "consumes": {
+    "power": 15.0,
+    // 高电力消耗
+    "items": [
+      {
+        "item": "C",
+        "amount": 15
+      }
+    ],
+    "liquid": {
+      "liquid": "NH",
+      // 催化流体氨
+      "amount": 5.0
+      // 单次消耗量
+    }
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽报错特效
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼工作烟雾
+
+  "outputItem": {
+    "item": "graphite",
+    "amount": 15
+  },
+  // 高效石墨量产产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": true,
+  // 支持超频扩产
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

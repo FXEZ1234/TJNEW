@@ -1,0 +1,99 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】工厂固定类型
+
+  "name": "重型焦化厂",
+  // 【必填】游戏内名称
+
+  "description": "大型工业级焦化设备，多腔室连续干馏设计，产能巨大、转化率极致，是全星球煤化工体系的终局核心产能设备。",
+  // 【可选】功能简介
+
+  "details": "【战时工业部核心档案】\n全星球焦化产能的核心支柱，是战时工业体系必须最高优先级保护的核心工厂。",
+  // 【可选】核心剧情档案
+
+  "size": 4,
+  // 【必填】4×4大型尺寸
+
+  "health": 2500,
+  // 【必填】高生命值
+
+  "armor": 15,
+  // 【可选】高阶护甲
+
+  "category": "crafting",
+  // 【必填】生产分类
+
+  "research": "DYL",
+  // 【可选】前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 300
+    },
+    {
+      "item": "MO",
+      "amount": 200
+    },
+    {
+      "item": "CG",
+      "amount": 150
+    },
+    {
+      "item": "SM",
+      "amount": 100
+    }
+  ],
+  // 高阶建造材料
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体原料
+
+  "hasLiquids": true,
+  // 附带流体产出
+
+  "consumes": {
+    "power": 10.0,
+    // 中高电力消耗
+    "items": [
+      {
+        "item": "coal",
+        "amount": 60
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽旧特效防报错
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼工作烟雾
+
+  "outputItems": [
+    {
+      "item": "C",
+      "amount": 50
+    }
+  ],
+  // 多物品输出配置
+
+  "outputLiquid": {
+    "liquid": "MJY",
+    "amount": 8.0
+  },
+  // 大量煤焦油产出
+
+  "canOverdrive": true,
+  // 支持超频扩产
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 120
+}

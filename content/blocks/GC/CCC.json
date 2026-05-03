@@ -1,0 +1,105 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】工厂基础类型
+
+  "name": "重型石墨压缩机",
+  // 【必填】游戏内显示名称
+
+  "description": "基于稳态电子团的终局石墨合成设备，通过高能电子团直接完成碳原子重排，实现1:1的极致石墨化转化率，是终局电子工业的核心设备。",
+  // 【可选】功能简介
+
+  "details": "【战时工业部终局档案】\n通过稳态电子团的定向能量输入，可在瞬间完成焦炭的石墨化反应，转化率接近100%，一台设备即可支撑全星球的石墨产能需求。",
+  // 【可选】高阶剧情档案
+
+  "size": 4,
+  // 【必填】4×4大型占地
+
+  "health": 2800,
+  // 【必填】高基础生命值
+
+  "armor": 18,
+  // 【可选】高护甲防御
+
+  "category": "crafting",
+  // 【必填】生产科技分类
+
+  "research": "ZZL",
+  // 【可选】终局前置研究ID
+
+  "requirements": [
+    {
+      "item": "BCHJ",
+      "amount": 180
+    },
+    {
+      "item": "SM",
+      "amount": 250
+    },
+    {
+      "item": "NI",
+      "amount": 450
+    },
+    {
+      "item": "CG",
+      "amount": 350
+    }
+  ],
+  // 高阶建造材料需求
+
+  "hasPower": true,
+  // 消耗大量电力
+
+  "hasItems": true,
+  // 处理大宗固体原料
+
+  "hasLiquids": false,
+  // 无流体参与
+
+  "consumes": {
+    "power": 30.0,
+    // 高电力消耗
+    "items": [
+      {
+        "item": "C",
+        "amount": 600
+      },
+      {
+        "item": "WDZT",
+        "amount": 1
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽高阶特效报错
+
+  "craftEffect": "smeltsmoke",
+  // 基础冶炼烟雾
+
+  "outputItem": {
+    "item": "graphite",
+    "amount": 600
+  },
+  // 大宗石墨产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": false,
+  // 终局设备上限，禁止超频
+
+  "solid": true,
+  // 大型实心建筑
+
+  "placeableLiquid": false,
+  // 不可放置水面
+
+  "breakable": true,
+  // 可被敌方摧毁
+
+  "buildTime": 300
+  // 大型建筑建造耗时更长
+}

@@ -1,0 +1,13 @@
+{
+  "name": "煤焦油",
+  "description": "焦化副产高附加值流体，煤化工核心原料，用于合成工业酸、特种粘合剂、防腐涂层，是战时化工体系的关键副产物。",
+  "details": "【战时工业部化工档案】\n焦化产线的核心副产物，不可浪费，是合成工业酸、高端化工材料的唯一原料，属于战略级化工资源。",
+  "color": "222222",
+  "gas": false,
+  "flammability": 0.2,
+  "explosiveness": 0.0,
+  "temperature": 0.2,
+  "heatCapacity": 0.8,
+  "viscosity": 0.9,
+  "research": "DYL"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "液氨",
+  "description": "高压液化氨，储运效率更高，是大型化工基地的标准氨储存形态。",
+  "details": "【工业储运手册】\n气态氨高压液化产物，大幅提升储运密度，是规模化工业生产的标准原料形态。",
+  "color": "aaddff",
+  "gas": false,
+  "flammability": 0.0,
+  "explosiveness": 0.1,
+  "temperature": -1.0,
+  "heatCapacity": 0.6,
+  "viscosity": 0.2,
+  "research": "NH"
+}

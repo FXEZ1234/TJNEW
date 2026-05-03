@@ -1,0 +1,98 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】工厂基础类型
+
+  "name": "稳电子硅冶炼厂",
+  // 【必填】游戏内显示名称
+
+  "description": "基于稳态电子团的终局硅冶炼设备，通过高能电子团直接还原沙中的硅元素，实现1:1的极致转化率，是终局工业体系的核心产能设备。",
+  // 【可选】功能简介
+
+  "details": "【战时工业部终局档案】\n人类硅冶炼技术的天花板，通过稳态电子团的定向能量释放，直接剥离沙中的硅元素，转化率接近100%，一台设备的产能即可支撑整个星球的硅需求。",
+  // 【可选】终局剧情介绍
+
+  "size": 4,
+  // 【必填】4×4大型占地
+
+  "health": 3000,
+  // 【必填】最高生命值
+
+  "armor": 20,
+  // 【可选】最高护甲值
+
+  "category": "crafting",
+  // 【必填】生产科技分类
+
+  "research": "ZZL",
+  // 【可选】终局解锁研究ID
+
+  "requirements": [
+    {
+      "item": "BCHJ",
+      "amount": 200
+    },
+    {
+      "item": "SM",
+      "amount": 300
+    },
+    {
+      "item": "NI",
+      "amount": 500
+    },
+    {
+      "item": "CG",
+      "amount": 400
+    }
+  ],
+  // 顶级建造材料需求
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理大宗固体原料
+
+  "hasLiquids": false,
+  // 无流体参与
+
+  "consumes": {
+    "power": 1.0,
+    // 低耗电、超高产能
+    "items": [
+      {
+        "item": "sand",
+        "amount": 750
+      },
+      {
+        "item": "WDZT",
+        "amount": 1
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽特效防崩溃
+
+  "craftEffect": "smeltsmoke",
+  // 基础工作烟雾
+
+  "outputItem": {
+    "item": "silicon",
+    "amount": 750
+  },
+  // 1:1极致硅产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": false,
+  // 性能已达上限，禁止超频
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 300
+}

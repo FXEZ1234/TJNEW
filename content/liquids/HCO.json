@@ -1,0 +1,13 @@
+{
+  "name": "水煤气",
+  "description": "由焦炭和水反应生产，用于提供氢气和一氧化碳。",
+  "details": "【工业化工手册】\n水煤气是石油供应链中断后的核心替代能源，制备门槛低，可在中小型工厂实现量产，单套气化装置即可满足常规冶炼集群的基础能源需求，是战时工业体系的基础能源保障。",
+  "color": "e6f2ff",
+  "gas": true,
+  "flammability": 0.85,
+  "explosiveness": 0.6,
+  "temperature": 0.3,
+  "heatCapacity": 0.45,
+  "viscosity": 0.15,
+  "research": "DYL"
+}

@@ -1,0 +1,105 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】生产类工厂固定类型
+
+  "name": "BCC石墨合成厂",
+  // 【必填】游戏内显示名称
+
+  "description": "标准型石墨合成设备，优化了高温反应腔结构，转化率更高、能耗比更优，是后方工业基地石墨产能的主力设备。",
+  // 【可选】方块基础功能描述
+
+  "details": "【战时工业部量产档案】\n相比基础型ACC设备，转化率提升20%，是后方工业基地的标配石墨生产设备，为全星球的电子工业提供稳定的原料供给。",
+  // 【可选】解锁剧情补充说明
+
+  "size": 3,
+  // 【必填】3×3方块尺寸
+
+  "health": 1100,
+  // 【必填】方块基础血量
+
+  "armor": 7,
+  // 【可选】防御护甲数值
+
+  "category": "crafting",
+  // 【必填】生产科技树分类
+
+  "research": "DYL",
+  // 【可选】前置解锁研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      // 建造物品ID
+      "amount": 75
+      // 建造物品数量
+    },
+    {
+      "item": "MO",
+      "amount": 55
+    },
+    {
+      "item": "CG",
+      "amount": 45
+    }
+  ],
+  // 【必填】建造材料需求列表
+
+  "hasPower": true,
+  // 启用电力消耗
+
+  "hasItems": true,
+  // 启用固体物品收发
+
+  "hasLiquids": false,
+  // 无流体收发
+
+  "consumes": {
+    // 生产消耗总配置
+
+    "power": 3.0,
+    // 每帧耗电数值
+
+    "items": [
+      {
+        "item": "C",
+        // 输入原料ID
+        "amount": 5
+        // 单次消耗数量
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 单次生产耗时1秒
+
+  "updateEffect": "none",
+  // 屏蔽旧特效防报错
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼烟雾工作特效
+
+  "outputItem": {
+    "item": "graphite",
+    // 产出物品ID
+    "amount": 3
+    // 单次产出数量
+  },
+
+  "outputLiquid": null,
+  // 无液体产出
+
+  "canOverdrive": true,
+  // 允许超频
+
+  "solid": true,
+  // 实心碰撞方块
+
+  "placeableLiquid": false,
+  // 不能放水面
+
+  "breakable": true,
+  // 可被敌人破坏
+
+  "buildTime": 60
+  // 建造耗时帧数
+}
