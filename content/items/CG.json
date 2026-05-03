@@ -1,0 +1,14 @@
+{
+	"name": "磁钢",
+	"description": "强大的通磁性是电机转子的最佳选择。",
+	"hardness":0.06,
+	"cost":12,
+	"color": "666484",
+	"healthScaling": 2,
+	"alwaysUnlocked":true,
+	"radioactivity": 0.00,
+	"explosiveness": 0,
+	"flammability": 0.00,
+	"charge":4.75,
+	"research": "lead"
+}

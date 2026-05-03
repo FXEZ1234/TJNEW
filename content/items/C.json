@@ -1,0 +1,13 @@
+{
+	"name": "焦炭",
+	"description": "由煤炭在干馏炉中焦化获得，相比煤炭更加纯净。更适合进行冶炼",
+	"hardness":2,
+	"cost":12,
+	"color": "#666484",
+	"healthScaling": 1,
+	"alwaysUnlocked":true,
+	"radioactivity": 0.0,
+	"explosiveness": 0,
+	"flammability": 0.0,
+	"research": "lead"
+}

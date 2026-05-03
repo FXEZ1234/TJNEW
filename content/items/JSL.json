@@ -1,0 +1,14 @@
+{
+	"name": "坚守令",
+	"description": "[RED]不计代价死守此处！整个部队打光为止 ",
+	"details":"[YELLOW]必须由师级以上干部讨论后签发",
+	"hardness": 0,
+	"cost":60,
+	"color": "#ff0000",
+	"alwaysUnlocked":true,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+        "charge":0,
+	"research": "copper"
+}

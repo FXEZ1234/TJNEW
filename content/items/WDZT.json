@@ -1,0 +1,17 @@
+{
+	"name": "稳态电子团",
+	"description": "[red]物理学的巅峰[yellow]克服库仑力将电子储存在极小的空间中[red]必须安全保存极度易燃易爆",
+"details":"南[red]孚[green]电[red]池[yellow]一[green]节[red]更[yellow]比[green]六[red]节[yellow]强",
+	"hardness": 0,
+	"cost":5,
+	"color": "00EE00",
+	"alwaysUnlocked":true,
+	"radioactivity": 0.12,
+	"explosiveness": 0,
+	"flammability": 2,
+        "charge":9.12,
+	"frames":5,
+	"transitionFrames":1,
+	"frameTime":4,
+	"research": "copper"
+}

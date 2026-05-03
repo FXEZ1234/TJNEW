@@ -1,0 +1,14 @@
+{
+	"name": "衫",
+	"description": "极强的电磁特性,可以产生巨大的磁场用于干扰敌方和线路。",
+	"hardness": 10,
+	"cost": 12,
+	"color": "666484",
+	"healthScaling": 2,
+	"alwaysUnlocked":true,
+	"radioactivity": 0.00,
+	"explosiveness": 0,
+	"flammability": 0.00,
+	"charge":1.25,
+	"research": "lead"
+}

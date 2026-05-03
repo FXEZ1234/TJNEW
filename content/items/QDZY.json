@@ -1,0 +1,14 @@
+{
+	"name": "全氮炸药",
+	"description": "[RED]火药工程界的奇迹，爆速竟超越十倍音速！",
+	"details":"但是一旦有静电或起火将会是灾难",
+	"hardness": 0,
+	"cost":8,
+	"color": "00EE00",
+	"alwaysUnlocked":true,
+	"radioactivity": 0.1,
+	"explosiveness": 16,
+	"flammability": 2,
+        "charge":0.1,
+	"research": "copper"
+}

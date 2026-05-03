@@ -1,0 +1,17 @@
+{
+	"name": "伯承合金",
+	"description": "强大的能量密度是撕开空间，连通虚实的钥匙，似乎扭曲了空间并造成能量外溢",
+	"details":"XXX上校：“撕裂空间定点破坏敌方内在就靠它了”",
+	"hardness": 0,
+	"cost":5,
+	"color": "00EE00",
+	"alwaysUnlocked":true,
+	"radioactivity": 0.12,
+	"explosiveness": 0.5,
+	"flammability": 0,
+        "charge":5.5,
+        	"frames":10,
+	"transitionFrames":1,
+	"frameTime":5,
+	"research": "copper"
+}

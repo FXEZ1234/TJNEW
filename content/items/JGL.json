@@ -1,0 +1,17 @@
+{
+	"name": "巨构令",
+	"description": "[#f5f5f5]对研究[#ffc370]巨构[#f5f5f5]的许可。必须由[#ffc370]军区长官[#f5f5f5]讨论后签字同意。可以用于召唤火力打击，合法建造[#ffc370]巨构[#f5f5f5]级建筑物",
+    "details":"[RED]现在正是破局之时",
+	"hardness": 0,
+	"cost":5,
+	"color": "00EE00",
+	"alwaysUnlocked":true,
+	"radioactivity": 0.0,
+	"explosiveness": 0,
+	"flammability": 0,
+        "charge":0.0,
+	"frames": 17,
+	"transitionFrames": 1,
+	"frameTime": 6,
+	"research": "BCHJ"
+}

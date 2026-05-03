@@ -1,0 +1,14 @@
+{
+	"id": "IR",
+	"name": "铱",
+	"description": "抗腐蚀,硬度大,抗性强,是正面装甲的不二之选。",
+	"hardness": 20,
+	"cost": 12,
+	"color": "666484",
+	"healthScaling": 2,
+	"alwaysUnlocked":true,
+	"radioactivity": 0.01,
+	"explosiveness": 0,
+	"flammability": 0.05,
+	"research": "lead"
+}

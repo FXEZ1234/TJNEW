@@ -1,0 +1,14 @@
+{
+	"name": "弹芯合金",
+	"description": "致密且坚硬穿透装甲时有自锐性,同时可对建筑造成巨大伤害。",
+	"hardness":24,
+	"cost":12,
+	"color": "666484",
+	"healthScaling": 2,
+	"alwaysUnlocked":true,
+	"radioactivity": 0.00,
+	"explosiveness": 0.5,
+	"flammability": 0.00,
+	"charge":0.25,
+	"research": "IR"
+}

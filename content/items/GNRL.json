@@ -1,0 +1,14 @@
+{
+	"name": "高能燃料",
+	"description": "固体燃料的极限！为打击敌方纵深或使用起大装药量战斗却提供可能",
+	"hardness":0.1,
+	"cost":12,
+	"color": "666484",
+	"healthScaling": 20,
+	"alwaysUnlocked":false,
+	"radioactivity": 0.00,
+	"explosiveness": 0.4,
+	"flammability": 2.70,
+	"charge":0.2,
+	"research": "lead"
+}

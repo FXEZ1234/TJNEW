@@ -1,0 +1,13 @@
+{
+	"name": "钼",
+	"description": "抗切削,硬度大,生物亲和力强可以用于大规模的孢子工业。",
+	"hardness": 15,
+	"cost": 2,
+	"color": "666484",
+	"healthScaling": 2,
+	"alwaysUnlocked":true,
+	"radioactivity": 0.01,
+	"explosiveness": 0,
+	"flammability": 0.05,
+	"research": "lead"
+}
