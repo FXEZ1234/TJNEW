@@ -1,0 +1,101 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】生产工厂类型
+
+  "name": "大型塑钢压缩机",
+  // 【必填】游戏内名称
+
+  "description": "更大的塑钢压缩机，允许大规模制造塑钢。",
+  // 【可选】功能简介
+
+  "details": "尽管需要更多石油，但是其工业能力比塑钢运输机强得多。",
+  // 【可选】精密工业剧情
+
+  "size": 3,
+  // 【必填】3×3标准尺寸
+
+  "health": 2000,
+  // 【必填】基础生命值
+
+  "armor": 6,
+  // 【可选】基础护甲
+
+  "category": "crafting",
+  // 【必填】生产分类
+
+  "research": "JSL",
+  // 【可选】专属前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 70
+    },
+    {
+      "item": "MO",
+      "amount": 50
+    },
+    {
+      "item": "CG",
+      "amount": 40
+    },
+    {
+      "item": "titanium",
+      "amount": 30
+    }
+  ],
+  // 建造材料
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体原料
+  "itemCapacity": 60,
+  // 物品容量（你已设置）
+  "hasLiquids": true,
+  // 启用液体输入
+
+  "consumes": {
+    "power": 4.5,
+    // 每帧电力消耗
+    "items": [
+      {
+        "item": "titanium",
+        "amount": 5
+      }
+    ],
+    "liquid": {
+      "liquid": "oil",
+      // 输入流体为水
+      "amount": 1.0
+      // 单次消耗水量
+    }
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽旧特效防报错
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼烟雾特效
+
+  "outputItem": {
+    "item": "plastanium",
+    "amount": 5
+  },
+  // 高纯度石墨产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": true,
+  // 支持超频
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

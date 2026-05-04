@@ -1,0 +1,106 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】生产工厂类型
+
+  "name": "稳电子塑钢压缩机",
+  // 【必填】游戏内名称
+
+  "description": "使用稳电子团能量注入，精密合成大量塑钢。",
+  // 【可选】功能简介
+
+  "details": "[YELLOW]巨量能源换来塑钢自由同样带来了浪费",
+  // 【可选】精密工业剧情
+
+  "size": 5,
+  // 【必填】尺寸
+
+  "health": 2000,
+  // 【必填】基础生命值
+
+  "armor": 6,
+  // 【可选】基础护甲
+
+  "category": "crafting",
+  // 【必填】生产分类
+
+  "research": "ASG",
+  // 【可选】专属前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 70
+    },
+    {
+      "item": "MO",
+      "amount": 50
+    },
+    {
+      "item": "CG",
+      "amount": 40
+    },
+    {
+      "item": "titanium",
+      "amount": 30
+    }
+  ],
+  // 建造材料
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体原料
+  "itemCapacity": 650,
+  // 物品容量（你已设置）
+  "hasLiquids": true,
+  // 启用液体输入
+  "liquidCapacity": 2250,
+  // 液体总缓存容量
+  "consumes": {
+    "power": 1.5,
+    // 每帧电力消耗
+    "items": [
+      {
+        "item": "titanium",
+        "amount": 150
+      },
+      {
+        "item": "WDZT",
+        "amount": 1
+      }
+    ],
+    "liquid": {
+      "liquid": "oil",
+      // 输入流体
+      "amount": 6.5
+      // 单次消耗液量
+    }
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽旧特效防报错
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼烟雾特效
+
+  "outputItem": {
+    "item": "plastanium",
+    "amount": 80
+  },
+  // 产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": true,
+  // 支持超频
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

@@ -1,17 +1,17 @@
 {
   "type": "GenericCrafter",
-  "name": "标准水电解制氢站",
+  "name": "重装水电解制氢站",
   "description": "集约化电解水设备，快速电解水，为工业化提供充足氢气和臭氧",
   "details": "为避免爆燃，多余气体直接排空，注意损耗",
-  "size": 4,
-  "health": 8000,
+  "size": 5,
+  "health": 9000,
   "armor": 6,
   "category": "crafting",
   "research": "DYL",
   "requirements": [
     { "item": "NI", "amount": 80 },
     { "item": "MO", "amount": 60 },
-    { "item": "CG", "amount": 50 },
+    { "item": "WDZT", "amount": 2 },
     { "item": "CFHJ", "amount": 30 }
   ],
   "hasPower": true,
@@ -21,8 +21,8 @@
   "craftTime": 60,
   // 输出两种液体，和你之前的results一致
   "outputLiquids": [
-    "hydrogen/2.0",
-    "ozone/1.0"
+    "hydrogen/8.0",
+    "ozone/4.0"
   ],
   // 为每个输出指定独立方向，右和左，避免混合
   "liquidOutputDirections": [1, 3],
@@ -30,8 +30,8 @@
   "dumpExtraLiquid": false,
   // 消耗配置：电力和输入的水
   "consumes": {
-    "power": 3.6,
-    "liquid": "water/3"
+    "power": 15.0,
+    "liquid": "water/12"
   },
   "rotate": true,
   // 新增：开启方块旋转功能，和原版电解机一致
