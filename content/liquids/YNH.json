@@ -6,8 +6,8 @@
   "gas": false,
   "flammability": 0.0,
   "explosiveness": 0.1,
-  "temperature": -1.0,
-  "heatCapacity": 0.6,
+  "temperature": -4.75,
+  "heatCapacity": 4.5,
   "viscosity": 0.2,
   "research": "NH"
 }

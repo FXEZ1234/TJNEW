@@ -47,7 +47,8 @@
 
   "hasItems": true,
   // 固体物品收发
-
+  "itemCapacity": 60,
+  // 物品容量（你已设置）
   "hasLiquids": false,
   // 无流体处理
 

@@ -51,7 +51,8 @@
 
   "hasItems": true,
   // 处理固体原料
-
+  "itemCapacity": 60,
+  // 物品容量（你已设置）
   "hasLiquids": true,
   // 启用液体输入
 

@@ -4,7 +4,7 @@
   "details": "【工业冶金手册】\n黑色冶金工业的核心还原剂，可高效还原金属氧化物制备高纯金属，也是合成气、水煤气的核心可燃成分，制备工艺简单，是战时工业体系的基础燃料与冶金原料。",
   "color": "444466",
   "gas": true,
-  "flammability": 0.9,
+  "flammability": 2.5,
   "explosiveness": 0.7,
   "temperature": 0.3,
   "heatCapacity": 0.3,

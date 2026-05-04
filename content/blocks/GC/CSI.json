@@ -11,7 +11,7 @@
   "details": "【战时工业部终局档案】\n人类硅冶炼技术的天花板，通过稳态电子团的定向能量释放，直接剥离沙中的硅元素，转化率接近100%，一台设备的产能即可支撑整个星球的硅需求。",
   // 【可选】终局剧情介绍
 
-  "size": 4,
+  "size": 7,
   // 【必填】4×4大型占地
 
   "health": 3000,
@@ -51,7 +51,8 @@
 
   "hasItems": true,
   // 处理大宗固体原料
-
+  "itemCapacity": 2500,
+  // 物品容量（你已设置）
   "hasLiquids": false,
   // 无流体参与
 
@@ -88,7 +89,7 @@
   "outputLiquid": null,
   // 无流体产出
 
-  "canOverdrive": false,
+  "canOverdrive": true,
   // 性能已达上限，禁止超频
 
   "solid": true,

@@ -49,7 +49,8 @@
 
   "hasItems": true,
   // 【必填】是否收发固体物品，有原料产出固定true
-
+  "itemCapacity": 60,
+  // 物品容量
   "hasLiquids": false,
   // 【必填】是否收发流体，无液体进出固定false
 

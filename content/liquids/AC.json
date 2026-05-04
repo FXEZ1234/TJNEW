@@ -4,10 +4,10 @@
   "details": "【战时工业部核心档案】\n现代化工体系的核心命脉，从镍、钼矿的浮选提纯，到伯承合金的酸洗除杂，再到阵地腐蚀武器的制备，全产业链均依赖工业酸的稳定供给，氨合成线与酸合成线是工厂最高优先级保护的目标。",
   "color": "ffff00",
   "gas": false,
-  "flammability": 0.0,
+  "flammability": 0.05,
   "explosiveness": 0.15,
   "temperature": 0.4,
-  "heatCapacity": 0.7,
+  "heatCapacity": 0.1,
   "viscosity": 0.5,
   "research": "NH"
 }

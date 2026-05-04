@@ -51,7 +51,8 @@
 
   "hasItems": true,
   // 处理大宗固体原料
-
+  "itemCapacity": 1500,
+  // 物品容量（你已设置）
   "hasLiquids": false,
   // 无流体参与
 
@@ -88,7 +89,7 @@
   "outputLiquid": null,
   // 无流体产出
 
-  "canOverdrive": false,
+  "canOverdrive": true,
   // 终局设备上限，禁止超频
 
   "solid": true,

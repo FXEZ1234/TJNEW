@@ -4,7 +4,7 @@
   "details": "【战时武器档案】\n阵地防御专用燃烧流体，附着式持续燃烧，是封锁敌方进攻路线的核心战术武器。",
   "color": "ff4400",
   "gas": false,
-  "flammability": 1.0,
+  "flammability": 3.5,
   "explosiveness": 0.3,
   "temperature": 0.5,
   "heatCapacity": 0.4,

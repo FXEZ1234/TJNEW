@@ -5,7 +5,7 @@
   "color": "e6f2ff",
   "gas": true,
   "flammability": 0.85,
-  "explosiveness": 0.6,
+  "explosiveness": 1.5,
   "temperature": 0.3,
   "heatCapacity": 0.45,
   "viscosity": 0.15,
