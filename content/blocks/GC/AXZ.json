@@ -1,0 +1,110 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】方块类型，生产工厂固定 GenericCrafter
+
+  "name": "大型相织布制造机",
+  // 【必填】游戏内建造菜单显示名称
+
+  "description": "更大的相织布制造机，优化生产过程，为前线提供更多的相织布，保证充足相织布供应",
+  // 【可选】方块基础简介，显示在物品详情页
+
+  "details": "依旧无法满足需要，必须改进。",
+  // 【可选】解锁后完整剧情介绍，支持换行符\n
+
+  "size": 4,
+  // 【必填】方块占地尺寸 3×3
+
+  "health": 1000,
+  // 【必填】方块基础生命值
+
+  "armor": 6,
+  // 【可选】方块护甲值，数值越高减伤越高
+
+  "category": "crafting",
+  // 【必填】科技树分类，生产类统一填crafting
+
+  "research": "ASI",
+  // 【可选】解锁该方块的前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      // 建造所需物品ID
+      "amount": 70
+      // 建造所需物品数量
+    },
+    {
+      "item": "MO",
+      "amount": 50
+    },
+    {
+      "item": "CG",
+      "amount": 40
+    }
+  ],
+  // 【必填】方块建造材料列表
+
+  "hasPower": true,
+  // 【必填】是否消耗电力，耗电工厂固定true
+
+  "hasItems": true,
+  // 【必填】是否收发固体物品，有原料产出固定true
+  "itemCapacity": 30,
+  // 物品容量
+  "hasLiquids": false,
+  // 【必填】是否收发流体，无液体进出固定false
+
+  "consumes": {
+    // 【核心】生产消耗配置总容器
+
+    "power": 25.0,
+    // 每帧电力消耗数值
+
+    "items": [
+      {
+        "item": "thorium",
+        // 生产输入原料ID
+        "amount": 3
+        // 单次生产消耗数量
+      },
+      {
+        "item": "sand",
+        "amount": 15
+      }
+    ]
+  },
+
+  "craftTime": 60,
+  // 【必填】单次生产周期 60帧=1秒
+
+  "updateEffect": "none",
+  // 关闭旧版动态特效，防止游戏报错
+
+  "craftEffect": "smeltsmoke",
+  // 工作时冶炼烟雾特效
+
+  "outputItem": {
+    "item": "phase-fabric",
+    // 产出物品ID
+    "amount": 2
+    // 单次生产产出数量
+  },
+
+  "outputLiquid": null,
+  // 无流体产出固定填null
+
+  "canOverdrive": true,
+  // 是否支持超频加速生产
+
+  "solid": true,
+  // 是否为实心方块，敌方单位无法穿过
+
+  "placeableLiquid": false,
+  // 禁止放置在液体表面
+
+  "breakable": true,
+  // 允许被敌方单位摧毁
+
+  "buildTime": 60
+  // 【可选】建造耗时 60帧=1秒
+}
