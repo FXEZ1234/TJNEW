@@ -2,28 +2,28 @@
   "type": "GenericCrafter",
   // 【必填】方块类型，生产工厂固定 GenericCrafter
 
-  "name": "氨稳电子相织布厂",
+  "name": "催发硫化厂",
   // 【必填】游戏内建造菜单显示名称
 
-  "description": "集约化生产，稳电子供能相织布制造机，钚法制备相织布的极限，作为制备相织布的主要设备，将相织布产量拉到了一个难以想象的高度，保证充足相织布供应",
+  "description": "催发合金加速，快速搅拌，镍制内衬，有效抵抗腐蚀，加速硫化物合成。",
   // 【可选】方块基础简介，显示在物品详情页
 
-  "details": "[RED]最终工厂，完美利用全部原料",
+  "details": "完美利用原料，高效生产",
   // 【可选】解锁后完整剧情介绍，支持换行符\n
 
-  "size": 5,
+  "size": 4,
   // 【必填】方块占地尺寸 3×3
 
   "health": 7000,
   // 【必填】方块基础生命值
 
-  "armor": 6,
+  "armor": 16,
   // 【可选】方块护甲值，数值越高减伤越高
 
   "category": "crafting",
   // 【必填】科技树分类，生产类统一填crafting
 
-  "research": "BXZ",
+  "research": "BLH",
   // 【可选】解锁该方块的前置研究ID
 
   "requirements": [
@@ -49,7 +49,7 @@
 
   "hasItems": true,
   // 【必填】是否收发固体物品，有原料产出固定true
-  "itemCapacity": 30,
+  "itemCapacity": 300,
   // 物品容量
   "hasLiquids": false,
   // 【必填】是否收发流体，无液体进出固定false
@@ -57,36 +57,34 @@
   "consumes": {
     // 【核心】生产消耗配置总容器
 
-    "power": 2.0,
+    "power": 11.0,
     // 每帧电力消耗数值
 
     "items": [
       {
-        "item": "PU",
+        "item": "coal",
         // 生产输入原料ID
-        "amount": 15
+        "amount": 40
         // 单次生产消耗数量
       },     
-      
       {
-        "item": "WDZT",
+        "item": "CFHJ",
         // 生产输入原料ID
         "amount": 1
         // 单次生产消耗数量
-      },
+      },    
+        {
+        "item": "lead",
+        // 生产输入原料ID
+        "amount": 10
+        // 单次生产消耗数量
+      },     
 
       {
         "item": "sand",
-        "amount": 30
+        "amount": 100
       }
-    ],
-
-      "liquid": {
-      "liquid": "NH",
-      // 输入流体
-      "amount": 0.5
-      // 单次消耗水量
-    }
+    ]
   },
 
   "craftTime": 60,
@@ -99,9 +97,9 @@
   // 工作时冶炼烟雾特效
 
   "outputItem": {
-    "item": "phase-fabric",
+    "item": "pyratite",
     // 产出物品ID
-    "amount": 25
+    "amount": 45
     // 单次生产产出数量
   },
 
@@ -115,11 +113,11 @@
   // 是否为实心方块，敌方单位无法穿过
 
   "placeableLiquid": false,
-  // 禁止放置在液体表面
+  // 是否放置在液体表面
 
   "breakable": true,
   // 允许被敌方单位摧毁
 
-  "buildTime": 60
+  "buildTime": 300
   // 【可选】建造耗时 60帧=1秒
 }

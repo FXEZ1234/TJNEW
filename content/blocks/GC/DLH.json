@@ -1,0 +1,101 @@
+{
+  "type": "GenericCrafter",
+  // 【必填】工厂固定类型
+
+  "name": "试验煤焦油硫化厂",
+  // 【必填】游戏内建造菜单显示名称
+
+  "description": "试验机工厂，测试性从煤焦油出发合成硫化物。",
+  // 【可选】方块基础简介，显示在物品详情页
+
+  "details": "[RED]小型化测试型工厂，效率极低。",
+  // 【可选】解锁后完整剧情介绍，支持换行符\n
+
+  "size": 2,
+  // 【必填】方块占地尺寸
+
+  "health": 200,
+  // 【必填】方块基础生命值
+
+  "armor": 1,
+  // 【可选】方块护甲值，数值越高减伤越高
+
+  "category": "crafting",
+  // 【必填】科技树分类，生产类统一填crafting
+
+  "research": "BLH",
+  // 【可选】解锁该方块的前置研究ID
+
+  "requirements": [
+    {
+      "item": "NI",
+      "amount": 90
+    },
+    {
+      "item": "MO",
+      "amount": 70
+    },
+    {
+      "item": "CG",
+      "amount": 60
+    },
+    {
+      "item": "SM",
+      "amount": 40
+    }
+  ],
+  // 建造材料需求
+
+  "hasPower": true,
+  // 消耗电力
+
+  "hasItems": true,
+  // 处理固体原料
+  "itemCapacity": 60,
+  // 物品容量（你已设置）
+  "hasLiquids": true,
+  // 启用催化流体输入
+
+  "consumes": {
+    "power": 4.0,
+    // 高电力消耗
+    "items": [
+      {
+        "item": "sand",
+        "amount": 5
+      }
+    ],
+    "liquid": {
+      "liquid": "MJY",
+      // 催化流体氨
+      "amount": 1.0
+      // 单次消耗量
+    }
+  },
+
+  "craftTime": 60,
+  // 生产周期1秒
+
+  "updateEffect": "none",
+  // 屏蔽报错特效
+
+  "craftEffect": "smeltsmoke",
+  // 冶炼工作烟雾
+
+  "outputItem": {
+    "item": "pyratite",
+    "amount": 3
+  },
+  // 高效石墨量产产出
+
+  "outputLiquid": null,
+  // 无流体产出
+
+  "canOverdrive": true,
+  // 支持超频扩产
+
+  "solid": true,
+  "placeableLiquid": false,
+  "breakable": true,
+  "buildTime": 60
+}

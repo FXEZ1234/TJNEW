@@ -2,16 +2,16 @@
   "type": "GenericCrafter",
   // 【必填】方块类型，生产工厂固定 GenericCrafter
 
-  "name": "氨稳电子相织布厂",
+  "name": "强化硫化物混合器",
   // 【必填】游戏内建造菜单显示名称
 
-  "description": "集约化生产，稳电子供能相织布制造机，钚法制备相织布的极限，作为制备相织布的主要设备，将相织布产量拉到了一个难以想象的高度，保证充足相织布供应",
+  "description": "镍制内衬，有效抵抗腐蚀，加速硫化物合成。",
   // 【可选】方块基础简介，显示在物品详情页
 
-  "details": "[RED]最终工厂，完美利用全部原料",
+  "details": "集约化生产，但效率不高。",
   // 【可选】解锁后完整剧情介绍，支持换行符\n
 
-  "size": 5,
+  "size": 3,
   // 【必填】方块占地尺寸 3×3
 
   "health": 7000,
@@ -23,7 +23,7 @@
   "category": "crafting",
   // 【必填】科技树分类，生产类统一填crafting
 
-  "research": "BXZ",
+  "research": "ASI",
   // 【可选】解锁该方块的前置研究ID
 
   "requirements": [
@@ -57,36 +57,28 @@
   "consumes": {
     // 【核心】生产消耗配置总容器
 
-    "power": 2.0,
+    "power": 3.0,
     // 每帧电力消耗数值
 
     "items": [
       {
-        "item": "PU",
+        "item": "coal",
         // 生产输入原料ID
-        "amount": 15
+        "amount": 5
         // 单次生产消耗数量
       },     
-      
       {
-        "item": "WDZT",
+        "item": "lead",
         // 生产输入原料ID
-        "amount": 1
+        "amount": 3
         // 单次生产消耗数量
-      },
+      },     
 
       {
         "item": "sand",
-        "amount": 30
+        "amount": 10
       }
-    ],
-
-      "liquid": {
-      "liquid": "NH",
-      // 输入流体
-      "amount": 0.5
-      // 单次消耗水量
-    }
+    ]
   },
 
   "craftTime": 60,
@@ -99,9 +91,9 @@
   // 工作时冶炼烟雾特效
 
   "outputItem": {
-    "item": "phase-fabric",
+    "item": "pyratite",
     // 产出物品ID
-    "amount": 25
+    "amount": 4
     // 单次生产产出数量
   },
 
