@@ -1,0 +1,120 @@
+{
+  "name": "水煤气冶氢厂",
+  // 【必填】游戏内显示名称，中文必须加英文半角双引号
+
+  "description": "快速部署的氢气制造厂，由水煤气出发，消耗水，重整制氢，提供最基础的氢气生产。",
+  // 【可选】基础功能描述，显示在方块详情页
+
+  "details": "皮薄馅大，小心轰炸。",
+  // 【可选】补充说明/轻量化剧情，研究解锁后完整显示
+  // 【技巧】换行用 \n
+
+  "type": "GenericCrafter",
+  // 【必填】方块类型，字符串
+
+  "size": 2,
+  // 【必填】方块占地面积，整数
+
+  "health": 200,
+  // 【必填】方块基础生命值，整数
+
+  "armor": 1,
+  // 【可选】方块防御护甲，整数
+
+  "category": "crafting",
+  // 【必填】科技树分类，字符串
+
+  "research": "ACC",
+  // 【可选】前置解锁研究，字符串
+
+  "requirements": [
+    {
+      "item": "NI",
+      // 【必填】需求物品ID，字符串
+      "amount": 70
+      // 【必填】需求物品数量，整数
+    },
+    {
+      "item": "MO",
+      "amount": 50
+    },
+    {
+      "item": "CG",
+      "amount": 40
+    }
+  ],
+  // 【必填】方块建造需求，数组
+
+  "hasPower": true,
+  // 【必填】是否消耗电力，布尔值
+
+  "hasItems": true,
+  // 【必填】是否处理固体物品，布尔值
+
+  "hasLiquids": true,
+  // 【必填】是否处理流体，布尔值
+  "liquidCapacity": 1920,
+  // 液体总缓存容量
+  "craftTime": 480,
+  // 【必填】单轮生产周期，整数
+
+  "craftEffect": "smeltsmoke",
+  // 【替换无效特效】冶炼类官方合法烟雾特效
+
+  "ambientSound": "smelt",
+  // 【可选】工作时的环境音效，字符串
+  // 【说明】冶炼类适配 smelt
+
+  "consumes": {
+    "power": 300.0,
+    // 沿用原电力消耗数值
+ "liquids": [
+      {
+        "liquid": "HCO",
+        "amount": 16.0
+      },
+      {
+        "liquid": "water",
+        "amount": 16.0
+      }
+    ],
+
+
+        "items": [
+      {
+        "item": "CFHJ",
+        // 生产输入原料ID
+        "amount": 1
+        // 单次生产消耗数量
+      }  
+    ]
+  },
+  // 标准合法消耗写法，替代旧版非法字段
+
+  "outputLiquid": {
+    "liquid": "hydrogen",
+    // 【必填】输出流体ID，字符串
+    "amount": 32.0
+    // 【必填】每帧流体输出量，数值
+  },
+  // 【可选】单流体输出，对象
+  // 【无输出】固定填 null
+
+  "canOverdrive": true,
+  // 【可选】是否可被超频项目超频，布尔值
+
+  "solid": true,
+  // 【可选】是否为实心方块，布尔值
+
+  "placeableLiquid": false,
+  // 【可选】是否可放置在液体表面，布尔值
+
+  "placeableOn": "both",
+  // 【可选】可放置地形，字符串
+
+  "breakable": true,
+  // 【可选】是否可被敌方单位破坏，布尔值
+
+  "buildTime": 60
+  // 【可选】建造所需时间，整数
+}
