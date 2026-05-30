@@ -53,7 +53,7 @@
 
   "hasLiquids": true,
   // 【必填】是否处理流体，布尔值
-  "liquidCapacity": 1920,
+  "liquidCapacity": 3840,
   // 液体总缓存容量
   "craftTime": 480,
   // 【必填】单轮生产周期，整数
@@ -67,15 +67,15 @@
 
   "consumes": {
     "power": 300.0,
-    // 沿用原电力消耗数值
+    // 电力消耗
  "liquids": [
       {
         "liquid": "HCO",
-        "amount": 16.0
+        "amount": 2.0
       },
       {
         "liquid": "water",
-        "amount": 16.0
+        "amount": 2.0
       }
     ],
 
@@ -94,7 +94,7 @@
   "outputLiquid": {
     "liquid": "hydrogen",
     // 【必填】输出流体ID，字符串
-    "amount": 32.0
+    "amount": 4.0
     // 【必填】每帧流体输出量，数值
   },
   // 【可选】单流体输出，对象

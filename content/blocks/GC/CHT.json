@@ -2,14 +2,14 @@
   "type": "GenericCrafter",
   // 【必填】方块类型，固定值，指定为通用配方生产建筑，支持自定义输入输出
 
-  "name": "基础羰重整厂",
+  "name": "谐振羰重整厂",
   // 【必填】游戏内显示名称，支持颜色格式（如[YELLOW]），玩家在建造菜单看到的名字
 
 
-  "description": "实验级小型羰重整厂，通过内部催化剂重整制备羰，为其他高级化工产品提供原料。",
+  "description": "超重型羰重整厂，消耗大量催化剂重整制备羰，为其他高级化工产品提供原料。",
   // 【可选】功能简介，鼠标悬浮在建造菜单时显示的简短说明
 
-  "details": "[RED]厚重的装甲无法掩饰防御的薄弱。",
+  "details": "[RED]",
   // 【可选】详细剧情/说明，点击建筑详情页显示的长文本，支持换行（\n）和颜色格式
 
   "size": 6,
@@ -24,7 +24,7 @@
   "category": "crafting",
   // 【必填】建造菜单分类，可选值：crafting（生产）、defense（防御）、distribution（运输）、liquid（液体）、power（电力）、units（单位）、effects（特效）
 
-  "research": "ALJ",
+  "research": "BHT",
   // 【可选】前置研究节点ID，玩家需先解锁该研究才能建造此建筑，不填则开局可造
 
   "requirements": [
@@ -43,6 +43,9 @@
 
   "hasItems": true,
   // 【可选】禁用物品系统，纯液体处理建筑设为false，隐藏物品输入输出口
+
+    "itemCapacity": 60,
+  // 物品容量
   "outputItem": null,
   // 无固体输出必须显式声明为null
   "liquidCapacity": 7680,
@@ -53,27 +56,31 @@
 
   "craftEffect": "smeltsmoke",
   // 【补全】化工冶炼类原版合法烟雾特效
+  
   "ambientSound": "smelt",
   // 【补全】冶炼类适配工作音效
 
 
    "consumes": {
     "power": 150.0,
-    // 【保留】每帧电力消耗3.0kW，完全匹配你的设定
+    // 每帧电力消耗
     "items": [
       { "item": "C", "amount": 50 },
-      // 【新增】每轮生产消耗1个碳(C)
+      //每轮生产消耗
+
       { "item": "CFHJ", "amount": 1 }
+            //每轮生产消耗
+
     ],
     "liquid": {
       "liquid": "HCO",
-      "amount": 16.0
+      "amount": 2.0
       // 【修改】每帧消耗0.25单位水煤气(HCO)
     }
     // 最终输入配方：0.25 HCO/帧 + 1 C/轮 + 3.0电/帧
   },
   "outputLiquids": [
-    { "liquid": "CO", "amount": 32.0 }
+    { "liquid": "CO", "amount": 4.0 }
     // 【修改】只产羰(CO)，每帧产出0.3单位，完全匹配你的要求
   ],
   "rotate": true,
