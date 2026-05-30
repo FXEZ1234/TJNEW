@@ -44,7 +44,7 @@
   "hasItems": true,
   // 【可选】禁用物品系统，纯液体处理建筑设为false，隐藏物品输入输出口
 
-    "itemCapacity": 60,
+    "itemCapacity": 260,
   // 物品容量
   "outputItem": null,
   // 无固体输出必须显式声明为null
